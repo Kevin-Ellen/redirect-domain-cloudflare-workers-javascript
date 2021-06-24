@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "geo-redirect-domain",
+  "version": "1.0.0",
+  "description": "Redirect all requests to a subdomain aligned with the location of the user using 'cf-ipcountry'",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write '**/*.{js,css,json,md}'"
+  },
+  "author": "Kevin-Ellen <45627930+Kevin-Ellen@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "wrangler": "^0.0.2"
+  }
+}
