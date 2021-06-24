@@ -5,11 +5,11 @@
 // Define a fall-back host, which will be used as a fallback or if none of the countries are matched.
 const newHost = 'example.com';
 
-// Data with the hosts of the countries we want to redirect to - The key needs to remain lowercase
+// Data with the hosts of the countries we want to redirect to - the key needs to be uppercase
 const countryMap = {
-  us: 'us.example.com',
-  au: 'au.example.com',
-  gb: 'uk.example.com'
+  US: 'us.example.com',
+  AU: 'au.example.com',
+  GB: 'uk.example.com'
 }
 
 
@@ -28,7 +28,7 @@ const handleRequest = async (request) => {
 
   // Store the country  in lowercase - info: https://support.cloudflare.com/hc/en-us/articles/200168236-What-does-Cloudflare-IP-Geolocation-do-
   // Please note, does not work in preview
-  const country = request.headers.get('cf-ipcountry').lower();
+  const country = request.headers.get('cf-ipcountry');
 
   // Change the host name by default, we may override this; but this is the safest way to ensure that the redirect will happen
   url.host = newHost;
